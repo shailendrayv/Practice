@@ -1,6 +1,7 @@
 // Reverse  Strings in JavaScript
-
 function reverse(str) {
-    return str.split('').reverse().join('');
+    return String(str).split('').reverse().join('');
 }
-console.log(reverse("Shailendra")); 
+
+console.log(reverse("Shailendra"));  // Output: "ardneliahS"
+console.log(reverse(12334445));      // Output: "54443321"
