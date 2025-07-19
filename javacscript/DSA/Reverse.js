@@ -32,3 +32,27 @@ function year(){
     }
 }
 console.log(year(leap));
+
+
+// write function  that calculate  the sum of  digits of a number
+
+let No = 7875;
+function sum(n) {
+    let sum = 0;
+    n.toString().split('').forEach(function(v) {
+        sum += Number(v);
+    });
+    return sum;
+}
+
+console.log(sum(No)); //
+
+
+//write multiplication table of a number
+let mul = 3;
+function Mul(n) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${n} x ${i} = ${n * i}`);
+    }
+}
+Mul(mul);
