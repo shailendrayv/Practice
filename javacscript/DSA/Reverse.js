@@ -2,7 +2,6 @@
 function reverse(str) {
     return String(str).split('').reverse().join('');
 }
-
 console.log(reverse("Shailendra"));  // Output: "ardneliahS"
 console.log(reverse(12334445));      // Output: "54443321"
 
@@ -21,3 +20,15 @@ function cal(a){
     return fact;
 }
 console.log(cal(a));
+
+// Is leap year or not
+
+let leap =prompt("Enter the year ");
+function year(){
+    if(leap%4 === 0){
+        return "Leap Year";
+    }else{
+        return "Not Lear Year";
+    }
+}
+console.log(year(leap));
