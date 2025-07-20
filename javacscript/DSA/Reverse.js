@@ -77,4 +77,56 @@ function MaxArr(arr) {
 
 console.log(MaxArr(arr)); 
 
+// Or max number
 
+let arr1 =[1,2,34,5,6,7,8]
+function MaxArr(arr) {
+    const maxNo=Math.max(...arr);
+    return maxNo;
+   
+}
+console.log(MaxArr(arr1));
+
+//write pilandrome number
+
+ let Pilandrome = prompt("Enter the Number");
+
+function Pdrome(str) {
+    num = Number(str);  // Convert input to a number
+    let original = num;
+    let reverse = 0;
+
+    while (num > 0) {
+        let reminder = num % 10;
+        num = Math.floor(num / 10);
+        reverse = reverse * 10 + reminder;
+    }
+
+    return reverse === original;
+}
+
+console.log(Pdrome(Pilandrome));  // true or false
+
+
+//OR palindrome number
+let Pilandrom = prompt("Enter the String");
+
+function Pdrome(str) {
+    let reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+
+console.log(Pdrome(Pilandrom));  // true or false
+
+//write raising a number to the power of another number
+let base=prompt("Enter the number ");
+let expon=prompt("Enter the number ");
+
+function Power(base,expon){
+    let result=1;
+    for(let i=1;i<=expon;i++){
+     result=result*base;
+    }
+    return result;
+}
+console.log(Power(base,expon));
