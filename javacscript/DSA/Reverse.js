@@ -225,3 +225,61 @@ function prime(num){
             console.log(i)
         }
     }
+
+
+//write  counts that number of  words in a Sentence
+let sentence = "shailendra yadav is good";
+function Word(sentence){
+    const word=sentence.split(' ');
+    console.log(sentence)
+    return word.length;
+}
+console.log(Word(sentence));  // Output: 4
+
+//write  convert celsuis to fahrenheit
+
+let celsuis =prompt("Enter the celsius ");             
+//celsuis=(Faharheit-32)*5/9
+//Faharheit=celsuis*9/5+32
+function Celsius(celsuis){
+    let faharheit= (celsuis*9/5)+32
+    faharheit=Math.round(faharheit)
+    return faharheit 
+}
+console.log(Celsius(celsuis)); 
+
+//write swapiing two numbers
+let d=5;
+let b=6;
+let c=b
+b=d
+a=c
+console.log(`swaping a=${d} and b=${b}`)
+//second method
+// let a=5;
+// let b=6;
+// a=a+b
+// b=a-b
+// a=a-b
+// console.log(`swaping a=${a} and b=${b}` )
+
+
+//write armstrong number or not
+let num = prompt("Enter a number to check for Armstrong");
+function Arm(num){
+    num = Number(num);     // Convert string to number
+    let sum = 0;
+    let temp = num;        // Store original number
+
+    while(temp > 0){
+        let digit = temp % 10;
+        sum += digit ** 3;
+        temp = Math.floor(temp / 10);
+    }
+    if(sum === num){
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(Arm(num));
