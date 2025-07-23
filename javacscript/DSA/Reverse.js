@@ -129,4 +129,99 @@ function Power(base,expon){
     }
     return result;
 }
-console.log(Power(base,expon));
+console.log(Power(base, expon));
+
+// write  count vowel and consonant in a string
+
+let str = prompt("Enter a string:");
+let vowels = 0;
+let consonants = 0;
+
+str = str.toLowerCase();
+
+for (let i = 0; i < str.length; i++) {
+    let ch = str[i];
+    if ('aeiou'.includes(ch)) {
+        vowels++;
+    } else if (ch >= 'a' && ch <= 'z') {
+        consonants++;
+    }
+}
+
+console.log("Vowels:", vowels);
+console.log("Consonants:", consonants);
+
+
+// write factor of a number using function
+
+let N=prompt("Enter the number ");
+
+function Fact(n){
+    let b=[];
+    for(let i=1;i<=n;i++){
+        if(n%i===0){
+            b.push(i)
+        }
+    }
+    return b;
+}
+console.log(Fact(N));
+
+
+//write  sum of Average of an array  of numbers
+let avg = [2, 3, 3, 4,8];
+
+function Avg(arr) {
+    let sum = 0;
+    arr.forEach(function(v) {
+        sum += v;
+        average=sum/arr.length
+    });
+    return average;
+        
+}
+
+console.log(Avg(avg));
+
+
+//second method to find average of an array
+let avg1 = [2, 3, 3, 4,8];
+
+function Avg(arr) {
+    let sum = 0;
+    for(let i=0;i<arr.length;i++){
+        sum  +=arr[i] 
+    }
+    let avg=sum/arr.length
+    return { sum:sum,avg:avg};
+    
+        
+}
+console.log(Avg(avg1));
+
+//write  Simple Interest
+let p =1000 ;
+let r=5;
+let y=1;
+
+function Loan(p,r,y) {
+    let simpleInterest =p*r*y/100;
+    return simpleInterest;
+    
+}
+console.log(Loan(p, r, y));
+
+// write prime number or not
+function prime(num){
+    for(let i=2;i<num;i++){
+        if(num%i===0){
+            return false;
+        }
+    }
+    return true;
+}
+    for(let i=2;i<1000;i++){
+        if(prime(i)){
+            console.log(i)
+        }
+    }
