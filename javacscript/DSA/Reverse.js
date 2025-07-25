@@ -283,3 +283,71 @@ function Arm(num){
     }
 }
 console.log(Arm(num));
+
+//find FizzBuzz ,multiples of 3 and 5, fizz for 3 and buzz for 5
+
+for(let i=1;i<=36;i++){
+    if(i%3===0 && i%5===0){
+         console.log("fizzbuzz")
+    }else if(i%3===0){
+        console.log("fizz")
+    }else if(i%5===0){
+        console.log( "buzz")
+   }else{
+        console.log(i)
+    }
+}
+
+//write Pyramid pattern
+
+let n=5;
+for(let i=1;i<=n;i++){
+    let row="";
+    for(let j=1;j<=n-i;j++){
+        row += " "
+    }
+    for(let l=1;l<=2*i-1;l++){
+        row +=l
+    }
+    console.log(row)
+}
+
+//OR write Pyramid pattern
+let ns=10;
+for(let i=1;i<=ns;i++){
+    let row="";
+    for(let j=1;j<=ns-i;j++){
+        row += " "
+    }
+    for(let k=1;k<=i;k++){
+        row +=k
+    }
+    for(let l=i-1;l>=1;l--){
+        row +=l
+    }
+    console.log(row)
+}
+
+//write alphabetical order of  a string
+let string="acdefghs"
+function Alph(string){
+    for(let i=0;i<string.length-1;i++){
+        if(string[i]>string[i+1]){
+        return false
+    }
+    }
+    return true
+   
+
+}
+console.log(Alph(string))
+
+//write Anagram or not
+
+function areAnagrams(str1, str2) {
+    str1 = str1.replace(/\s/g, '').toLowerCase();//Remove spaces and convert to lowercase
+    str2 = str2.replace(/\s/g, '').toLowerCase();
+    if (str1.length !== str2.length) return false;// Check lengths first
+    return str1.split('').sort().join('') === str2.split('').sort().join('');  // Sort and compare
+}
+console.log(areAnagrams("listen", "silent"));  // true
