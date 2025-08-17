@@ -351,3 +351,48 @@ function areAnagrams(str1, str2) {
     return str1.split('').sort().join('') === str2.split('').sort().join('');  // Sort and compare
 }
 console.log(areAnagrams("listen", "silent"));  // true
+
+
+//write trnspose of a matrix
+// Input 2x3 matrix
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+
+
+function transposeMatrix(matrix) {
+    let rows = matrix.length;
+    let cols = matrix[0].length;
+    let transposed = [];
+
+    for (let i = 0; i < cols; i++) {
+        transposed[i] = [];
+        for (let j = 0; j < rows; j++) {
+            transposed[i][j] = matrix[j][i];
+        }
+    }
+
+    return transposed;
+}
+// Call the function
+console.log(transposeMatrix(matrix));  // Output: [[1, 4], [2, 5], [3, 6]]
+
+// write code of perfect number or not
+function Perfect(num){
+    let Prodivisor=[];
+    for(let i=1; i<num;i++){
+        if(num%i===0){
+            Prodivisor.push(i)
+        }
+    }
+    let sum=0;
+    Prodivisor.forEach(d =>{sum = sum +d});
+    console.log(sum)
+    if(sum===num){
+        return true
+    }else{
+        return false
+    }
+}
+console.log(Perfect(6))
