@@ -1,4 +1,4 @@
-// write  a program to find all palindromic substrings within a given string.
+// write  a program to find all palindromic number within a given number.
 
 function Palindrome(num){
     const origin =num;
@@ -11,6 +11,8 @@ function Palindrome(num){
     return reverse===origin;
 }
 console.log(Palindrome(121));
+// write  a program to find all palindromic substrings within a given string.
+
 
 function palindrome(inputString) {
   let reverse = "";
