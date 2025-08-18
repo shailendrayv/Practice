@@ -417,11 +417,5 @@ const arr2 = [
 
 console.log( matrice(arr0, arr2));
 
-//Tip calculator
-
-function TipAmout(){
-    
-
-}
     
 
