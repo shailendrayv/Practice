@@ -2,7 +2,9 @@
 
 const prompt = require("prompt-sync")();
 
-let dice = parseInt(prompt("Enter the number of sides on the dice: "));
+let dice =prompt("Enter the number of  the dice: ");
+let side=prompt("Enter the number of side ");
+
 
 function Roll(sides) {
   return Math.floor(Math.random() * sides) + 1;
@@ -20,4 +22,4 @@ function multDice(numDice, sideDice) {
 
   return result;
 }
-console.log(multDice(2, dice));
+console.log(multDice(side, dice));
