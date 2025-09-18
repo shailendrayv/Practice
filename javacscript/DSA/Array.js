@@ -80,7 +80,15 @@ for(let x of arr){
 /*use of Spilec() method
 syntax: array.splice(start, deleteCount, item1, item2, ...)
 */
-arr1 = [1,2,3,4,5,6,7,8,9];
-arr1.splice(2,1,10,20,30); // removes 3 elements from index 2
-console.log(arr1);
+// arr1 = [1,2,3,4,5,6,7,8,9];
+// arr1.splice(1,3,10,20,30); // removes 3 elements from index 2
+// console.log(arr1);
 
+// Shallow copy of array
+arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+arr2.splice(1,4);
+console.log(arr2);
+
+let arr4 = [1, 2, 3];
+let copy = [...arr4];
+console.log(copy);
