@@ -1,3 +1,36 @@
+
+<p align="center">
+     <h1 align="center"> Array </h1> 
+</p>
+
+### Using Map(),filter()andreduce()
+```javascript
+/*
+👉 Creates a new array by applying a function to each element.
+👉array.map(callback(element, index, array))
+👉 Does not modify the original array
+*/
+let arr7 = [1, 2, 3, 4, 5];
+let arr8 = arr7.map((x) => x * 2);
+console.log(arr8);
+/*
+👉 Creates a new array with elements that pass a condition (true/false).
+👉 array.filter(callback(element, index, array));
+👉 Does not modify the original array.
+*/
+let arr9 = arr7.filter((x) => x % 2 == 0);
+console.log(arr9);
+
+/*👉 Reduces the array to a single value by applying a function.
+👉 array.reduce(callback(accumulator, currentValue)=> {....} ,initialValue);
+👉 Does not modify the original array.
+*/
+
+let sum = arr7.reduce((acc, curr) => acc + curr, 0);
+console.log(sum);
+
+```
+
 ### Question 1: write  a  js program to Ascending order and Descending order of an array
 
 ```javascript
@@ -41,3 +74,4 @@ var fib = function (n) {
 console.log(fib(5));
 
 ```
+
