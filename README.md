@@ -3,6 +3,16 @@
      <h1 align="center"> Array </h1> 
 </p>
 
+
+# use of Spilec() method
+syntax: array.splice(start, deleteCount, item1, item2, ...)
+
+```javascript
+ arr1 = [1,2,3,4,5,6,7,8,9];
+arr1.splice(1,3,10,20,30); // removes 3 elements from index 2
+console.log(arr1);
+```
+
 ### Using Map(),filter()andreduce()
 ```javascript
 /*
