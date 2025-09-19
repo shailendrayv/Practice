@@ -30,6 +30,45 @@ let sum = arr7.reduce((acc, curr) => acc + curr, 0);
 console.log(sum);
 
 ```
+### Qustion : write a js program to how do you check  if  an element exists in an array or not
+```javascript
+let  arr10 = [1, 2, 3, 4, 5];
+const finds=(arr10,ele)=>{
+    for(let i=0; i<arr10.length; i++){
+        if(arr10[i] === ele){
+            return true;
+        }
+    }
+    return false;
+
+}
+console.log(finds(arr10,3));
+console.log(finds(arr10,8));
+console.log(arr10.includes(3));
+console.log(arr10.includes(8));
+```
+
+### Qustion : write a js program to how do you check   Index if  an element exists in an array or not
+
+```javascript
+let arr11 = [1, 2, 3, 4, 5];
+const findINdex = (arr11, ele) => {
+  for (let i = 0; i < arr11.length; i++) {
+    if (arr10[i] === ele) {
+      return i;
+    }
+  }
+  return -1;
+};
+console.log(findINdex(arr11, 3));
+console.log(findINdex(arr11, 8));
+console.log(arr11.indexOf(3));
+console.log(arr11.indexOf(8));
+
+```
+
+
+
 
 ### Question 1: write  a  js program to Ascending order and Descending order of an array
 
