@@ -67,6 +67,110 @@ console.log(str10.repeat(3)); // HelloHelloHello
 
 ```
 <p align="center">
+     <h1 align="center"> DSA OF STRING </h1> 
+</p>
+
+
+### QUES1: write code to Anagram to strings
+```javascript
+var isAnagram = function (s, t) {
+  s = s.toLowerCase().split("").sort().join("");
+  t = t.toLowerCase().split("").sort().join("");
+  return s === t;
+};
+console.log(isAnagram("anagram", "nagaram")); // true
+console.log(isAnagram("rat", "car")); // false
+
+```
+### QUES2:Write a function to find the longest common prefix string amongst an array of strings.
+```javascript
+var strs = ["flower", "flow", "flight"];
+var longestCommonPrefix = function (strs) {
+  if (strs.length === 0) return "";
+  let prefix = strs[0];
+  for (let i = 1; i < strs.length; i++) {
+    while (strs[i].indexOf(prefix) !== 0) {
+      prefix = prefix.slice(0, -1);
+      if (prefix === "") return "";
+    }
+  }
+  return prefix;
+};
+console.log(longestCommonPrefix(strs));//fl
+```
+### QUES2:Write  a program to alternative merged word;
+```javascript
+var word1 = "abc", word2 = "pqr";
+var mergeAlternately = function (word1, word2) {
+  let merged = "";
+  let i = 0,j = 0;
+  while (i < word1.length || j < word2.length) {
+    if (i < word1.length) {
+      merged += word1[i];
+      i++;
+    }
+    if (j < word2.length) {
+      merged += word2[j];
+      j++;
+    }
+  }
+  return merged;
+};
+console.log(mergeAlternately(word1, word2)); // Output: "apbqcr"
+
+```
+### QUES4:Write a program Length of Last Word.
+```javascript
+var s = "Hello World";
+var lengthOfLastWord = function (s) {
+  return s.trim().split(" ").pop().length;
+};
+console.log(lengthOfLastWord(s));
+
+```
+### QUES5:write a program to Valid Palindrome of string.
+```javascript
+var isPalindrome = function(s) {
+    // remove non-alphanumeric and make lowercase
+    s = s.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    // reverse string
+    let reversed = s.split("").reverse().join("");
+    // check palindrome
+    return s === reversed;
+};
+
+// Test cases
+console.log(isPalindrome("madam"));         // true
+console.log(isPalindrome("racecar"));       // true
+console.log(isPalindrome("hello"));         // false
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
+```
+### QUES6: write a program to reverse words in a string
+```javascript
+var s = "the sky is blue";
+var reverseWords = function(s) {
+    return s.trim().split(/\s+/).reverse().join(" ");
+};
+console.log(reverseWords(s)); // Output: "blue is sky the"
+```
+### QUES7:write  a program to  reverse vowels of a string
+```javascript
+var reverseVowels = function(s) {
+    let vowels = s.match(/[aeiouAEIOU]/g); // get all vowels
+    if (!vowels) return s;                 // no vowels case
+    return s.replace(/[aeiouAEIOU]/g, () => vowels.pop());
+};
+
+console.log(reverseVowels("hello"));     // "holle"
+console.log(reverseVowels("leetcode"));  // "leotcede"
+console.log(reverseVowels("aA"));        // "Aa"
+console.log(reverseVowels("IceCreAm"));  // "AmCrEeI"
+
+```
+
+
+
+<p align="center">
      <h1 align="center"> Array </h1> 
 </p>
 
