@@ -25,7 +25,7 @@ console.log(str1.includes("World")); // true
 console.log(str1.indexOf("o")); // 4
 console.log(str1.lastIndexOf("d")); // 11
 console.log(str1.localeCompare(str2))//-1
-let str4 = "     Shailendra yadav is code  javascript javascript ";
+let str4 = "Shailendra yadav is code  javascript javascript";
 console.log(str4.search("Shailendra")); // 0
 console.log(str4.replace("javascript", "python")); // Shailendra yadav is code python
 console.log(str4.replaceAll("javascript", "CSS")); // Shailendra yadav is code css css
@@ -61,8 +61,99 @@ console.log(JSON.stringify(obj)); // converts a JavaScript object to a JSON stri
 let str10 = "Hello";
 console.log(str10.repeat(3)); // HelloHelloHello
 
+// Reverse a string
+
+var s = ["h", "e", "l", "l", "o"];
+var reverseString = function (s) {
+  s.reverse();
+  return s;
+};
+console.log(reverseString(s)); // Output: ["o", "l", "l", "e", "h"]
+
+//  write code to Anagram to strings
+var isAnagram = function (s, t) {
+  s = s.toLowerCase().split("").sort().join("");
+  t = t.toLowerCase().split("").sort().join("");
+  return s === t;
+};
+console.log(isAnagram("anagram", "nagaram")); // true
+console.log(isAnagram("rat", "car")); // false
+
+//Write a function to find the longest common prefix string amongst an array of strings.
+var strs = ["flower", "flow", "flight"];
+var longestCommonPrefix = function (strs) {
+  if (strs.length === 0) return "";
+  let prefix = strs[0];
+  for (let i = 1; i < strs.length; i++) {
+    while (strs[i].indexOf(prefix) !== 0) {
+      prefix = prefix.slice(0, -1);
+      if (prefix === "") return "";
+    }
+  }
+  return prefix;
+};
+console.log(longestCommonPrefix(strs));
+
+//You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
+var word1 = "abc", word2 = "pqr";
+var mergeAlternately = function (word1, word2) {
+  let merged = "";
+  let i = 0,j = 0;
+  while (i < word1.length || j < word2.length) {
+    if (i < word1.length) {
+      merged += word1[i];
+      i++;
+    }
+    if (j < word2.length) {
+      merged += word2[j];
+      j++;
+    }
+  }
+  return merged;
+};
+console.log(mergeAlternately(word1, word2)); // Output: "apbqcr"
 
 
+// Write a program Length of Last Word
+
+var s = "Hello World";
+var lengthOfLastWord = function (s) {
+  return s.trim().split(" ").pop().length;
+};
+console.log(lengthOfLastWord(s));
+
+// write a program to Valid Palindrome
+var isPalindrome = function(s) {
+    // remove non-alphanumeric and make lowercase
+    s = s.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    // reverse string
+    let reversed = s.split("").reverse().join("");
+    // check palindrome
+    return s === reversed;
+};
+
+// Test cases
+console.log(isPalindrome("madam"));         // true
+console.log(isPalindrome("racecar"));       // true
+console.log(isPalindrome("hello"));         // false
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
+
+// write a program to reverse words in a string
+var s = "the sky is blue";
+var reverseWords = function(s) {
+    return s.trim().split(/\s+/).reverse().join(" ");
+};
+console.log(reverseWords(s)); // Output: "blue is sky the"
 
 
+// write  a program to  reverse vowels of a string
+var reverseVowels = function(s) {
+    let vowels = s.match(/[aeiouAEIOU]/g); // get all vowels
+    if (!vowels) return s;                 // no vowels case
+    return s.replace(/[aeiouAEIOU]/g, () => vowels.pop());
+};
 
+console.log(reverseVowels("hello"));     // "holle"
+console.log(reverseVowels("leetcode"));  // "leotcede"
+console.log(reverseVowels("aA"));        // "Aa"
+console.log(reverseVowels("IceCreAm"));  // "AmCrEeI"
