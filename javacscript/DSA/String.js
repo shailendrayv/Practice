@@ -120,7 +120,9 @@ var s = "Hello World";
 var lengthOfLastWord = function (s) {
   return s.trim().split(" ").pop().length;
 };
-console.log(lengthOfLastWord(s));
+console.log(lengthOfLastWord(s));// Output: 5
+
+
 
 // write a program to Valid Palindrome
 var isPalindrome = function(s) {
