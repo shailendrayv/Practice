@@ -81,5 +81,14 @@ console.log(Object.is(person, person2));
 
 
 
+const person1 = {
+  name: "Shailendra",
+  age: 23,
+  greet: function() {
+    console.log( this.name);
+  }
+};
+
+person1.greet(); // Hello, my name is Shailendra
 
 
